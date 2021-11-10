@@ -2168,7 +2168,7 @@ var copadoStep = {
         if (!copadoStep.stepId) copadoApp.removeNewStep();
     },
     redirectToRollbackWizard: function () {
-        var namespace = copadoApp.ns != '' ? copadoApp.ns + '__' : '';
+        var namespace = copadoApp.ns != '' ? copadoApp.ns : '';
         var sfQquery = `SELECT Id,${namespace}Deployment_Last_Step__c FROM ${namespace}Deployment__c WHERE Id='${copadoApp.data.dep.Id}'`;
         var deploymentRecord = sforce.connection
             .query(sfQquery)
