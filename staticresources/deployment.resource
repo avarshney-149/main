@@ -63,6 +63,14 @@ var copadoApp = {
         }
     },
 
+    data: {
+        dep: null,
+        jobs: null,
+        destinations: null,
+        attachSuccessNames: [],
+        jobIdsToSkipRedraw: []
+    },
+
     /**
      * logic copy from standard button
      * The idea is update all pending jobs to cancelled and reload
