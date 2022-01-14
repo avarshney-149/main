@@ -260,7 +260,6 @@ var isRollback = isRollback ? isRollback : undefined;
     app.createStep = (justSaveAndClose) => {
         getMetadataGridConfig();
         app.conf.jsonData.selectedMetadata = app.grid.selectedMetadata;
-        console.log('app.grid.selectedMetadata :',app.grid.selectedMetadata);
         var noMetadataSelected = !app.conf.jsonData.selectedMetadata || !app.conf.jsonData.selectedMetadata.length;
         // if no metadata is selected and just save and close button is clicked no need to show a warning. In this case no need to create a steps.
         if (noMetadataSelected && !justSaveAndClose) {

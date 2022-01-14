@@ -7,4 +7,11 @@
         <shortDescription>Feedback</shortDescription>
         <value>Give us feedback</value>
     </labels>
+    <labels>
+        <fullName>functionCalloutError500</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FunctionCallout</shortDescription>
+        <value>Functions internal server error. If the issue persists, please contact support.</value>
+    </labels>
 </CustomLabels>
