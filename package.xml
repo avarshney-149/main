@@ -5,6 +5,10 @@
         <name>PermissionSet</name>
     </types>
     <types>
+        <members>Customer Community Test</members>
+        <name>Profile</name>
+    </types>
+    <types>
         <members>DW_javascript</members>
         <name>StaticResource</name>
     </types>
