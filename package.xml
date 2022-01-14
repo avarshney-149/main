@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.Comments__c</members>
-        <name>CustomField</name>
+        <members>Copado_User</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Customer Community Test</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>DW_javascript</members>
+        <name>StaticResource</name>
     </types>
     <version>53.0</version>
 </Package>
