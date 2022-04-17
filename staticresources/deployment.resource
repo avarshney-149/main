@@ -1753,7 +1753,6 @@ var copadoStep = {
         if (!me.bound) {
             me.bindInputs();
         }
-
         me.loading();
         me.dirty = false;
         me.orgId = orgId;
@@ -1776,7 +1775,6 @@ var copadoStep = {
 
         copadoGrid.isActive = me.uiBlockByType[stepType].grid;
         me.uiBlockByType[stepType].grid && copadoGrid.init(false);
-
         if (me.uiBlockByType[stepType].qb) {
             if (me.stepObj[copadoApp.ns + 'dataJson__c']) {
                 try {
@@ -1832,7 +1830,6 @@ var copadoStep = {
             //reset inputs on new
             me.setSavedData(stepType, false);
         }
-
         cb && cb();
     },
 
@@ -2796,8 +2793,9 @@ var copadoGrid = {
             //keep jquery pointer for performance query
             var $grid = $copado('<div>');
 
+            $copado('#jqxgrid').empty();
             $copado('#jqxgrid').html($grid);
-
+            
             var params = copadoGrid.getBasicParams();
             params.source = copadoGrid.makeSource(type, data);
             params.columns = copadoGrid.getColumnsByType(type);
@@ -2808,20 +2806,21 @@ var copadoGrid = {
                 profiles = [],
                 types = [];
             console.debug('type==> ', type);
-            console.debug('types==> ', types);
             console.debug('data==> ', data);
 
             for (var i = 0; i < data.length; i++) {
-                if (!countries.includes(data[i].c)) {
+                if (!countries.includes(data[i].c) && data[i].c) {
                     countries.push(data[i].c);
                 }
-                if (!profiles.includes(data[i].p)) {
+                if (!profiles.includes(data[i].p) && data[i].p) {
                     profiles.push(data[i].p);
                 }
             }
             if (countries.length > 0) {
-                copadoGrid.$currentGrid.jqxGrid('setcolumnproperty', 'p', 'filteritems', profiles);
                 copadoGrid.$currentGrid.jqxGrid('setcolumnproperty', 'c', 'filteritems', countries);
+            }
+            if(profiles.length > 0){
+                copadoGrid.$currentGrid.jqxGrid('setcolumnproperty', 'p', 'filteritems', profiles);
             }
 
             if (type == 'Full Profiles') {
@@ -2829,8 +2828,10 @@ var copadoGrid = {
             } else if (type == 'Full Permission Sets') {
                 types.push('PermissionSet');
             }
-            if (types.length > 0) {
-                copadoGrid.$currentGrid.jqxGrid('setcolumnproperty', 't', 'filteritems', types);
+            if (types && types.length > 0) {
+                setTimeout(function () {
+                    copadoGrid.$currentGrid.jqxGrid('setcolumnproperty', 't', 'filteritems', types);
+                }, 3000);
             }
 
             console.timeEnd('Grid created time');
@@ -3124,7 +3125,6 @@ var copadoGrid = {
         };
         //TODO: replace me by copadoGrid.activeDS
         rock.datasource = source;
-
         //adapter wrapper
         return new $copado.jqx.dataAdapter(source);
     },
@@ -3235,9 +3235,20 @@ var copadoGrid = {
             } else {
                 metadataGrid2 = new MetadataGrid2(conf);
             }
+            metadataGrid2.loadSelectedMetaData = function (callbackFinished) {
+                var selectedMetadata = dw.u.getSavedStepData(copadoStep.stepType);
+                if (selectedMetadata === false) {
+                    console.debug('MetadataGrid2.loadSelectedMetaData(): no data for', copadoStep.stepType, 'rock.stepId=', rock.stepId);
+                    if (callbackFinished) callbackFinished();
+                    return;
+                }
+                setWithoutRebinding(this.selectedMetadata, selectedMetadata);
+                console.debug('MetadataGrid2.loadSelectedMetaData()', this.selectedMetadata.length);
+                if (callbackFinished) callbackFinished();
+            };
             metadataGrid2._setGridData(dw.u.getSavedStepData('Delete MetaData'));
             metadataGrid2.render();
-            metadataGrid2.refreshCache(function (cachedDate) {
+            metadataGrid2.refreshDeletedMetadataCache(function (cachedDate) {
                 metadataGrid2.eltTabs.jqxTabs('select', 0);
                 rock.createCacheDeleteButton(cachedDate);
                 rock.showGetVlocityDependenciesButton();
