@@ -8,6 +8,14 @@
         <value>Give us feedback</value>
     </labels>
     <labels>
+        <fullName>TestCannotBeRunMessage</fullName>
+        <categories>Test</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestCannotBeRunMessage</shortDescription>
+        <value>This test cannot be run yet. Remember to check the &quot;Ready to Run&quot; box when the test definition is ready and the test can be available for execution.</value>
+    </labels>
+    <labels>
         <fullName>functionCalloutError500</fullName>
         <language>en_US</language>
         <protected>true</protected>
