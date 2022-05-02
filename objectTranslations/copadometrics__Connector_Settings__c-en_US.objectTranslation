@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Connector Id --></label>
+        <name>copadometrics__Connector_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Schema Configured? --></label>
+        <name>copadometrics__Is_Schema_Configured__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Known Status --></label>
+        <name>copadometrics__Last_Known_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schema Id --></label>
+        <name>copadometrics__Schema_Id__c</name>
+    </fields>
+</CustomObjectTranslation>

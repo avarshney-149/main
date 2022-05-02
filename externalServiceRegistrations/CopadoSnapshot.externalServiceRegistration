@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Execute a Copado Git Snapshot.</description>
+    <label>CopadoSnapshot</label>
+    <namedCredential>Copado_API_Credential</namedCredential>
+    <operations>
+        <active>true</active>
+        <name>executegitsnapshot</name>
+    </operations>
+    <schema>{
+  &quot;swagger&quot;: &quot;2.0&quot;,
+  &quot;info&quot;: {
+    &quot;description&quot;: &quot;Backup an Org&apos;s metadata in a git branch.&quot;,
+    &quot;version&quot;: &quot;1.2&quot;,
+    &quot;title&quot;: &quot;Copado Git Snapshot&quot;
+  },
+  &quot;schemes&quot;: [
+    &quot;https&quot;
+  ],
+  &quot;paths&quot;: {
+    &quot;/json/v1/webhook/gitSnapshot/{gitSnapshotId}&quot;: {
+      &quot;get&quot;: {
+        &quot;summary&quot;: &quot;Execute a Copado Git Snapshot.&quot;,
+        &quot;description&quot;: &quot;Execute Git Snapshot&quot;,
+        &quot;operationId&quot;: &quot;executeGitSnapshot&quot;,
+        &quot;consumes&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;gitSnapshotId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;description&quot;: &quot;Git Snapshot Id&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;a0K1n00000V9bHR&quot;
+          },
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: false,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;88c305ff80a0dae9a7b850a17704ee98&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;Success starting job.&quot;,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/Result&quot;
+            }
+          },
+          &quot;default&quot;: {
+            &quot;description&quot;: &quot;Default exception.&quot;,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/Error&quot;
+            }
+          }
+        },
+        &quot;externalDocs&quot;: {
+          &quot;description&quot;: &quot;Learn more about snapshot operations provided by this API.&quot;,
+          &quot;url&quot;: &quot;https://copado.docs.apiary.io/#reference/take-a-git-snapshot/jsonv1webhookgitsnapshotsnapshotidapikeyuserapikey/get&quot;
+        }
+      }
+    }
+  },
+  &quot;definitions&quot;: {
+    &quot;Result&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;copadoJobId&quot;,
+        &quot;isFinished&quot;,
+        &quot;isSuccess&quot;,
+        &quot;status&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;copadoJobId&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;9e68acda-f6aa-479e-ab73-8d83ef963c72&quot;
+        },
+        &quot;status&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;Queued&quot;
+        },
+        &quot;isFinished&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;isSuccess&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        }
+      }
+    },
+    &quot;Error&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;error&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;error&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;Unauthorized&quot;
+        }
+      }
+    }
+  }
+}</schema>
+    <schemaType>OpenApi</schemaType>
+    <serviceBinding>{&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+</ExternalServiceRegistration>

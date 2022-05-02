@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Copado API Endpoints to get backend job status and complete a deployment job.</description>
+    <label>CopadoAPI</label>
+    <namedCredential>Copado_API_Credential</namedCredential>
+    <operations>
+        <active>true</active>
+        <name>completedeploymentjob</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>getjobstatus</name>
+    </operations>
+    <schema>{
+  &quot;swagger&quot;: &quot;2.0&quot;,
+  &quot;info&quot;: {
+    &quot;description&quot;: &quot;Get the Copado backend job status and complete a Copado deployment job.&quot;,
+    &quot;version&quot;: &quot;0.1&quot;,
+    &quot;title&quot;: &quot;Copado API Job Status and Completion&quot;
+  },
+  &quot;schemes&quot;: [
+    &quot;https&quot;
+  ],
+  &quot;consumes&quot;: [
+    &quot;application/json&quot;
+  ],
+  &quot;paths&quot;: {
+    &quot;/json/v1/webhook/jobStatus/{copadoJobId}&quot;: {
+      &quot;get&quot;: {
+        &quot;summary&quot;: &quot;Get status of a Copado job.&quot;,
+        &quot;description&quot;: &quot;Get Job Status&quot;,
+        &quot;operationId&quot;: &quot;getJobStatus&quot;,
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;copadoJobId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;9e68acda-f6aa-479e-ab73-8d83ef963c72&quot;
+          },
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: false,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;88c305ff80a0dae9a7b850a17704ee98&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;Success checking job status.&quot;,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/JobResult&quot;
+            }
+          },
+          &quot;default&quot;: {
+            &quot;description&quot;: &quot;Error executing job.&quot;,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/JobError&quot;
+            }
+          }
+        },
+        &quot;externalDocs&quot;: {
+          &quot;description&quot;: &quot;Learn more about checking job status provided by this API.&quot;,
+          &quot;url&quot;: &quot;https://copado.docs.apiary.io/#reference/check-job-status/get&quot;
+        }
+      }
+    },
+    &quot;/json/v1/webhook/resumeDeployment/{deploymentJobId}&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Complete Copado deployment job as success or failed.&quot;,
+        &quot;operationId&quot;: &quot;completeDeploymentJob&quot;,
+        &quot;consumes&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;produces&quot;: [
+          &quot;application/json&quot;
+        ],
+        &quot;parameters&quot;: [
+          {
+            &quot;name&quot;: &quot;deploymentJobId&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;description&quot;: &quot;deployment&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;a0C1n00001ZAegmEAD&quot;
+          },
+          {
+            &quot;name&quot;: &quot;api_key&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;88c305ff80a0dae9a7b850a17704ee98&quot;
+          },
+          {
+            &quot;name&quot;: &quot;success&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;TRUE&quot;
+          },
+          {
+            &quot;name&quot;: &quot;deploymentId&quot;,
+            &quot;in&quot;: &quot;query&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-example&quot;: &quot;a0E1n00000Hb3FbEAJ&quot;
+          },
+          {
+            &quot;in&quot;: &quot;body&quot;,
+            &quot;name&quot;: &quot;results&quot;,
+            &quot;required&quot;: true,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/JobResultMessage&quot;
+            }
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;Success checking job status.&quot;,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/JobResult&quot;
+            }
+          },
+          &quot;default&quot;: {
+            &quot;description&quot;: &quot;Error executing job.&quot;,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/JobError&quot;
+            }
+          }
+        },
+        &quot;externalDocs&quot;: {
+          &quot;description&quot;: &quot;Learn more about resuming the deployment provided by this API.&quot;,
+          &quot;url&quot;: &quot;https://copado.docs.apiary.io/#reference/resume-deployment/get&quot;
+        }
+      }
+    }
+  },
+  &quot;definitions&quot;: {
+    &quot;JobResult&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;copadoJobId&quot;,
+        &quot;isFinished&quot;,
+        &quot;isSuccess&quot;,
+        &quot;status&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;copadoJobId&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;9e68acda-f6aa-479e-ab73-8d83ef963c72&quot;
+        },
+        &quot;status&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;Queued&quot;
+        },
+        &quot;isFinished&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;isSuccess&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        }
+      }
+    },
+    &quot;JobError&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;error&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;error&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;Unauthorized&quot;
+        }
+      }
+    },
+    &quot;JobResultMessage&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;error&quot;,
+        &quot;info&quot;,
+        &quot;warning&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;info&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;Scanned 25 metadata items.&quot;
+        },
+        &quot;error&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;Validation failed&quot;
+        },
+        &quot;warning&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;example&quot;: &quot;Scanned 25 metadata items and found 10 low risk findings.&quot;
+        }
+      }
+    }
+  }
+}</schema>
+    <schemaType>OpenApi</schemaType>
+    <serviceBinding>{&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+</ExternalServiceRegistration>

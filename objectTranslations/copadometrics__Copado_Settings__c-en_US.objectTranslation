@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Server URL --></label>
+        <name>copadometrics__Server_URL__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Can_Deploy_to_Higher_Environment</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Copado Release Manager Extra Permissions</label>
+</PermissionSet>

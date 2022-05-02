@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>lcunningham@copado.com</contactEmail>
+    <label>Copado DX</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIC5jCCAc4CCQCZaT0142AjRzANBgkqhkiG9w0BAQsFADA0MQswCQYDVQQGEwJVUzEPMA0GA1UECgwGQ29wYWRvMRQwEgYDVQQDDAt3d3cuY29wYS5kbzAgFw0yMDA3MjMxMzA2NDZaGA8yMTMwMDEyODEzMDY0NlowNDELMAkGA1UEBhMCVVMxDzANBgNVBAoMBkNvcGFkbzEUMBIGA1UEAwwLd3d3LmNvcGEuZG8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDodajBoWxByMjhSUhSWii522RPIXQubmkVpPZtSQBSjMMkP4Y8IrxjHiDRUSNHWQDRd+VAzWQqHIxqUh0fm7xFfo8D9jFSwlVyrCCwP0yYIaAsVAHXmFD4yi6pDaUsbuIX+g9tM7Jo2P7PQ2K9PizCe5Rb2L9vgFT5GuDztUqlYKIsMFj8G0Jayt0qctNLRSE11IJcuC9odN36KV3pEHiIhL8yZiq3CSWWGgcOWSHXplpBpuMgikcO2oWBC1VlC8Uc12hTls8r4ri0R3LyWp7Ss5IZGQyGzIPk7tYmP18ByZUUNcp5GiT6p8SQ7HU3RWo5ytn+F7X0MJ3wVGzHcCSRAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAB29uVuxBGZA/wZhnqgN7TGwrigK/AkwZhi7DcKyY2ITSU8qmVcKsA+DnlYL/y5ajS7YHsk7Ag/HjqRUATQ0MehZXFt90oR5tI0GanrRhgm2RjciwsxFKNIbQ1HVBRFBhp1GvLPz/HVC6qxuOtYAg3cN2jgtfqJXvgjMaqJT8G/tE/l7+GcxYKPj95M/32mWhSvi1OHxP6HEvzX2ou1kJ5lzm897SLM+QUl+PQV1Ed0pH2NpNmQIsDQbfvnFaNAGO9uv7U63gGMUCSEOWESdpmb9PxAH5uAt3pcTUFkdz0kLwXiNY2xrQolT90fmqRAR3utZAKmCRplBWMgDgr+wLEM=</certificate>
+        <consumerKey>3MVG9rKhT8ocoxGkPdSEUBFzU_VB45pIjEw2kuaglGECohdKzFndKImxz3AVFz6fsXPCvzTWNagK7jUF.UzEh</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>To Do Developer</permissionSetName>
+    <profileName>System Administrator</profileName>
+    <profileName>System Admin</profileName>
+</ConnectedApp>
