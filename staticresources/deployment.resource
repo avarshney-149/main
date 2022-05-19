@@ -1010,7 +1010,6 @@ var copadoApp = {
      */
     saveStepCallback: function (step) {
         copadoApp.showMessage('CONFIRM', copadoLabels.SAVE_SUCCESS);
-        console.log('iugug');
 
         //was new
         if (!copadoApp.selectedStepId) {
