@@ -2266,7 +2266,7 @@ var copadoStep = {
             dw.u.upsertAttach(copadoStep.stepId, 'MetaData', JSON.stringify(list));
             cb && cb();
         };
-        console.log('testt');
+        console.error('test');
         me.handlers['Git MetaData'].updateStepFields = function (step, obj) {
             var cGMS = copadoGitMetadataStep;
             step[copadoApp.ns + 'Branch__c'] = cGMS.data.branch;
