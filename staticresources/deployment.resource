@@ -2267,6 +2267,7 @@ var copadoStep = {
             cb && cb();
         };
         console.error('test');
+        console.log('validate');
         me.handlers['Git MetaData'].updateStepFields = function (step, obj) {
             var cGMS = copadoGitMetadataStep;
             step[copadoApp.ns + 'Branch__c'] = cGMS.data.branch;
