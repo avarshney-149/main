@@ -1,8 +1,9 @@
 global with sharing class SampleJobFinishCallback {
+       //wuh1111uuuu
        global void execute(Account job, String status) {
-           String test;
-           String test1;
+           System.debug('ha11llo');
+           String teest;
            // Start execution of next job template
-           // The callback context is Automated process user
        }
+       Integer whorld;
    }
