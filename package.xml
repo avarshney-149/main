@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>DW_Overview</members>
+        <members>TestSamplePage</members>
         <name>ApexPage</name>
     </types>
     <types>
-        <members>Tests</members>
+        <members>TestTrigger</members>
         <name>ApexTrigger</name>
     </types>
     <version>54.0</version>
