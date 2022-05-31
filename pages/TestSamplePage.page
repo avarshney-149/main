@@ -1,0 +1,9 @@
+<apex:page >
+    <!-- Begin Default Content REMOVE THIS -->
+    <p>Congratulations</p>
+    This is not so new
+    <div>
+        <h2>Say What !!!</h2>
+    </div>
+    <!-- End Default Content REMOVE THIS -->
+</apex:page>
