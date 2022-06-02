@@ -5,6 +5,14 @@
         <name>ApexComponent</name>
     </types>
     <types>
+        <members>TestSamplePage</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>TestTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
         <members>testAuraBundle</members>
         <name>AuraDefinitionBundle</name>
     </types>

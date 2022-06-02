@@ -2,8 +2,8 @@
     <!-- Begin Default Content REMOVE THIS -->
     <p>Congratulations</p>
     This is not so new
-    <div>
-        <h2>Say What !!!</h2>
-    </div>
+    <p>
+        <h4>Oh no no no </h4>
+    </p>
     <!-- End Default Content REMOVE THIS -->
 </apex:page>
