@@ -1,0 +1,10 @@
+<aura:component>
+Yo !!!
+<h1>Testing </h1>
+<p>
+    uygkuyg
+</p>
+<span>
+    test
+</span>
+</aura:component>
