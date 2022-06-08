@@ -1,9 +1,9 @@
 <apex:component >
     <!-- Begin Default Content REMOVE THIS -->
-    <h1>Congratulations</h1>
-    This is your new Component
+    <h4>Default</h4>
+    This is your old componentMessagesMap
     <!-- End Default Content REMOVE THIS -->
-    <div>
-        <h2>Say What !!!</h2>
-    </div>
+    <p>
+        <span>Say What !!! Oh no non!! Monday </span>
+    </p>
 </apex:component>
