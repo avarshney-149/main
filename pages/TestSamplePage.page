@@ -1,9 +1,9 @@
 <apex:page >
     <!-- Begin Default Content REMOVE THIS -->
-    <p>Default</p>
-    <div>This is old</div>
+    <p>beginning!!</p>
+    <div>This is old page</div>
     <p>
-        <span>Hello world !! </span>
+        <h3>Hello world !! </h3>
     </p>
     <!-- End Default Content REMOVE THIS -->
 </apex:page>
