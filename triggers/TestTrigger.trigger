@@ -1,6 +1,6 @@
 trigger TestTrigger on Account (before insert) {
-    String test1;
+    String test90;
     //testt
-    Boolean ohNo;
-    System.debug('5765');
+    Boolean monday;
+    System.debug('57565');
 }
