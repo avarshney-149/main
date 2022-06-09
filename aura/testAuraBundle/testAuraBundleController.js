@@ -1,5 +1,6 @@
 ({
     myAction : function(component, event, helper) {
-        console.log('hgfkjh');
+        var test3;
+        let test = 'test';
     }
 })
