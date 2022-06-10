@@ -4,7 +4,7 @@
     <div>This is your old componentMessagesMap</div>
     <!-- End Default Content REMOVE THIS -->
     <p>
-        <span>Say What !!! Oh no non!! Monday </span>
+        <div>Say What !!! Oh no non!! Monday </div>
     </p>
-    <div>New Block for Merge Conflict</div>
+    <div>testing merge conflict</div>
 </apex:component>
