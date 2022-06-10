@@ -1,9 +1,10 @@
 <apex:component >
     <!-- Begin Default Content REMOVE THIS -->
-    <h4>Default</h4>
-    This is your old componentMessagesMap
+    <h4>Beginninh</h4>
+    <div>This is your old componentMessagesMap</div>
     <!-- End Default Content REMOVE THIS -->
     <p>
         <span>Say What !!! Oh no non!! Monday </span>
     </p>
+    <div>New Block for Merge Conflict</div>
 </apex:component>
