@@ -6,4 +6,5 @@
     <p>
         <span>Say What !!! Oh no non!! Monday </span>
     </p>
+    <div>New Block for Merge Conflict</div>
 </apex:component>
