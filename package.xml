@@ -4,5 +4,9 @@
         <members>SampleDummy</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>TestTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
     <version>54.0</version>
 </Package>
