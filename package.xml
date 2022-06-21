@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>SampleDummy</members>
+        <members>SampleJobFinishCallback</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>TestTrigger</members>
-        <name>ApexTrigger</name>
+        <members>testComponent</members>
+        <name>ApexComponent</name>
     </types>
     <version>54.0</version>
 </Package>
