@@ -3,5 +3,6 @@ public class SampleDummy {
     void somemethod(){
         //to do
         this.someBool = true;
+        
     }
 }
