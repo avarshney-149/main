@@ -1,0 +1,10 @@
+<apex:component >
+    <!-- Begin Default Content REMOVE THIS -->
+    <h4>Beginninh</h4>
+    <div>This is your old componentMessagesMap</div>
+    <!-- End Default Content REMOVE THIS -->
+    <p>
+        <div>Say What !!! Oh no non!! Monday </div>
+    </p>
+    <div>testing merge conflict</div>
+</apex:component>
