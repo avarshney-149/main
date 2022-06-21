@@ -1,8 +1,10 @@
 public class SampleDummy {
-    Boolean someBool = false;
+    Boolean someBool = true;
     void somemethod(){
-        //to do
-        this.someBool = true;
-        
+        //Update
+        this.someBool = false;
+    }
+    public void someUpdate() {
+        //do something
     }
 }
