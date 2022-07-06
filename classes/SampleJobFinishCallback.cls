@@ -7,6 +7,8 @@ global with sharing class SampleJobFinishCallback {
            System.debug('{!Environment.{!Environment.tester}ter}ting');
            // Start execution of next job template
            // The callback context is Automated process user
+           System.debug('{!Environment.{!Environment.tester}ter}ttt');
+           String {!Environment.{!Environment.tester}ter}t1;
        }
        Integer helloWorld;
    }
