@@ -9,6 +9,7 @@ global with sharing class SampleJobFinishCallback {
            // The callback context is Automated process user
            System.debug('{!Environment.{!Environment.tester}ter}ttt');
            String {!Environment.{!Environment.tester}ter}t1;
+           Boolean orange;
        }
        Integer helloWorld;
    }
