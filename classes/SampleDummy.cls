@@ -1,8 +1,8 @@
 public class SampleDummy {
-    String someBool = 'false';
+    String someBool = 'true';
     void somemethod(){
         // something
-        this.someBool = 'true';
+        this.someBool = 'false';
     }
     private void nextOne() {
         // wodoo
