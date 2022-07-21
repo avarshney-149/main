@@ -1,7 +1,7 @@
 @isTest
 public class AccountOperationsTest {
-    @isTest static void testAccountHasDefaultDescription() {       
-        // Perform test
+    @isTest static void {!Environment.{!Environment.tester}ter}tAccountHasDefaultDescription() {       
+        // Perform {!Environment.{!Environment.tester}ter}t
         Test.startTest();
         Account acc = new Account(Name='Test Account');
         Database.SaveResult result = Database.insert(acc);
