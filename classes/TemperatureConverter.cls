@@ -5,5 +5,5 @@ public class TemperatureConverter {
         return cs.setScale(2);
     }
     
-    //Test Conflict Res Story One
+    //Test Conflict Res Story Two
 }
