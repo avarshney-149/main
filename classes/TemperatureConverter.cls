@@ -5,5 +5,9 @@ public class TemperatureConverter {
         return cs.setScale(2);
     }
     
+<<<<<<< HEAD
     //Test Conflict Res 123
+=======
+    //Test Conflict not in promo branch
+>>>>>>> refs/remotes/origin/feature/US-0008312
 }
