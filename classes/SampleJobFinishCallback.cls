@@ -9,6 +9,7 @@ global with sharing class SampleJobFinishCallback {
            // The callback context is Automated process user
            System.debug('yolo');
            String hello;
+           Integer conflict = 0;
        }
        Integer helloWorld;
    }
