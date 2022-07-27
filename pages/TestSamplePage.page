@@ -6,6 +6,9 @@
         <h3>Hello world !! </h3>
     </p>
     <!-- End Default Content REMOVE THIS -->
+    <!-- Start Content REMOVE THIS -->
     <div>A new block</div>
     <p>for merge conflict</p>
+    <!-- End Content REMOVE THIS -->
+    <p>for smart resolved conflict</p>
 </apex:page>
