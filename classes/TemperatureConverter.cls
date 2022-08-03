@@ -6,8 +6,12 @@ public class TemperatureConverter {
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     //Test Conflict Res 123
 =======
     //Test Conflict not in promo branch
 >>>>>>> refs/remotes/origin/feature/US-0008312
+=======
+    //Test Conflict Res - New page not in promotion branch
+>>>>>>> refs/remotes/origin/feature/US-0008340
 }
