@@ -5,5 +5,5 @@ public class TemperatureConverter {
         return cs.setScale(2);
     }
     
-    //Test Conflict Res - New page not in promotion branch
+    //Test Conflict Res - conflict change scenario 11 Aug
 }
